@@ -1,7 +1,7 @@
-name: Apex Tests
+name: Run CumulusCI Task
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       task:
         required: true
