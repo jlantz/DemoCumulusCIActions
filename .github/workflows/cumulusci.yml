@@ -12,12 +12,13 @@ on:
 
 env:
   CUMULUSCI_SERVICE_github: '${{ secrets.CUMULUSCI_SERVICE_github }}'
-  CUMULUSCI_ORG_dev: '${{ secrets.CUMULUSCI_ORG_dev }}'
+#  CUMULUSCI_ORG_dev: '${{ env.CUMULUSCI_ORG_dev }}'
 
 jobs:
   run_task:
     name: "Run CumulusCI Task"
     runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.org }}
     steps:
     - uses: actions/checkout@v2
     - name: Install Salesforce CLI
