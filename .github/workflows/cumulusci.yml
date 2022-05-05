@@ -6,6 +6,9 @@ on:
       task:
         required: true
         type: string
+      org:
+        required: true
+        type: environment
 
 env:
   CUMULUSCI_SERVICE_github: ${{ secrets.CUMULUSCI_SERVICE_github }}
@@ -35,4 +38,4 @@ jobs:
         python -m pip install -U pip
         pip install cumulusci
     - run: |
-        cci task run ${inputs.task} --org dev
+        cci task run ${github.event.inputs.task} --org dev
