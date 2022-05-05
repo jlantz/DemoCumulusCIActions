@@ -9,6 +9,9 @@ project:
     source_format: sfdx
 
 tasks:
+    github_env_sync:
+        class_path: tasks.github.GithubEnvironmentSync
+        description: Syncs a local org with the specified GitHub Environment
     robot:
         options:
             suites: robot/DemoCumulusCIActions/tests
