@@ -11,8 +11,8 @@ on:
         type: environment
 
 env:
-  CUMULUSCI_SERVICE_github: '${{ secrets.CUMULUSCI_SERVICE_github }}'
-#  CUMULUSCI_ORG_dev: '${{ env.CUMULUSCI_ORG_dev }}'
+  CUMULUSCI_SERVICE_github: ${{ secrets.CUMULUSCI_SERVICE_github }}
+  CUMULUSCI_ORG_dev: ${{ secrets.CUMULUSCI_ORG_dev }}
 
 jobs:
   run_task:
